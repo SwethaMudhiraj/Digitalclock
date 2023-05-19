@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ImageEdit</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            transition: all 0.5s;
+        }
+        #imageDiv{
+            width:60%;
+            height:100vh;
+            background-color: wheat;
+            float:left;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        #editDiv{
+            width:40%;
+            height:100vh;
+            background-color: azure;
+            float:left;
+        }
+        #filters,#transform{
+            float:left;
+            width:50%;
+            height:100vh;
+            background-color: yellowgreen;
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-evenly;
+        }
+        #transform{
+            float:left;
+            width:50%;
+            height:100vh;
+            background-color: seashell;
+            transform: rotate();
+        }
+        label{
+            font-size: 20px;
+            
+        }
+        input{
+            width:90%;
+        }
+        img{
+            width:80%;
+            filter:sepia()
+        }
+        
+
+    </style>
+    <script src="../JAVASCRIPT/ImageEditExternal.js" defer></script>
+</head>
+<body>
+    <div id="imageDiv">
+        <img id="image" src="C:\Users\91799\Downloads/RadhaKrishna.jpg">
+    </div>
+    <div id="editDiv">
+        <div id="filters">
+            <label>Blur</label>
+            <input type="range" oninput="editTheImage()" value="0">
+            <label>Brightness</label>
+            <input type="range" oninput="editTheImage()" min="0" max="200" value="100">
+            <label>Contrast</label>
+            <input type="range" oninput="editTheImage()" min="0" max="200" value="100">
+            <label>Grayscale</label>
+            <input type="range" oninput="editTheImage()" value="0">
+            <label>Hue-Rotate</label>
+            <input type="range" oninput="editTheImage()" min="0" max="360" value="0">
+            <label>Invert</label>
+            <input type="range" oninput="editTheImage()" value="0" min="0" max="100">
+            <label>Opacity</label>
+            <input type="range" oninput="editTheImage()" min="0" max="100"  value="100">
+            <label>saturate</label>
+            <input type="range" oninput="editTheImage()" min="0" max="200"  value="100">
+            <label>sepia</label>
+            <input type="range" oninput="editTheImage()" value="0">
+        </div>
+        <div id="transform">
+            <label>RotateZ</label>
+            <input type="range" oninput="editTheImage()" min="0" max="180" value="0">
+            <label>RotateY</label>
+            <input type="range" oninput="editTheImage()" min="0" max="180" value="0">
+
+            <label>RotateX</label>
+            <input type="range" oninput="editTheImage()" min="0" max="180" value="0">
+            <label>Scale</label>
+            <input type="range" oninput="editTheImage()" min="0" max="10" value="1">
+            <label>ScaleY</label>
+            <input type="range" oninput="editTheImage()" min="0" max="5" value="1">
+            <label>ScaleX</label>
+            <input type="range" oninput="editTheImage()" min="0" max="5" value="1">
+            <label>Skew</label>
+            <input type="range" oninput="editTheImage()" min="-180" max="180" value="0">
+            <label>SkewX</label>
+            <input type="range" oninput="editTheImage()" min="-180" max="180" value="0">
+            <label>SkewY</label>
+            <input type="range" oninput="editTheImage()" min="-180" max="180" value="0">
+        </div>
+    </div>
+
+    
+</body>
+</html>
